@@ -1,8 +1,8 @@
 
-![Logo](https://imgur.com/VE1nWC7.png)
+![Logo]([https://imgur.com/VE1nWC7.png](https://cdn.discordapp.com/attachments/1163459191034363976/1206656559367589968/infinitylogo.png?ex=66142c7e&is=6601b77e&hm=bf90e183f599ce083ccd73520ac4f65ff6a308a0bc27caa0ceb84348fe9325cb&))
 
 
-# FQQD's MCServer Website Template 1.0
+# francy sito web
 
 A template for a modern looking website to promote your Minecraft server.
 
