@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[InfinityMc]</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <a href="https://wiki.example.com/" class="desktop_navbar_link"></a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">Staff member</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="#join" class="desktop_navbar_link2 scroll">Unisciti a noi!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://wiki.example.com/">Wiki</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">Staff member</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Unisciti a noi</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/logo.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Server,<br>Discord</a>
+          <a class="main1_actcent">cosa aspetti entra</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">discord</span>
+            <br>
+            <span class="main1_ipcopier_text2">Clicca per copiare</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("https://discord.gg/AQnUV8U9");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('il link del server discord è stato copiato con succeso'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">in arrivo....</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">in arrivo...</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">in arrivo...</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">in arrivo...</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">in arrivo...</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">in arrivo...</a>
+            <a class="main2_feature_text"></a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">unisciti al nostro server Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222501640196718632/in_arrivo...._1.png?ex=66167260&is=6603fd60&hm=195d27ea00847c83bf3fbf38f2277a46e70d8090919fc8922c6a907aae7aa7ed&" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Parliamo!</a>
+            <a class="main4_dc_description"> ・Incontra altri giocatori <br> ・Fare domande <br> ・Ricevi notifiche sugli aggiornamenti <br> ・ Dare un feedback  <br><br> &amp; molto altro</a>
+            <a href="https://discord.gg/xN5eGRkK" class="main4_dc_button_a">
+              <div class="main4_dc_button">Unisciti</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Membri dello staff</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222271922134323230/download.png?ex=66159c6e&is=6603276e&hm=75141170559fe54fa6599e415f128f641939f30a6e9d8341b44923fdde893976&">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">owner</a> 
+              <a class="main5_admins_description_title" href="https://cdn.discordapp.com/attachments/1163459191034363976/1222271922134323230/download.png?ex=66159c6e&is=6603276e&hm=75141170559fe54fa6599e415f128f641939f30a6e9d8341b44923fdde893976&">Fede Fire</a>
+              <a class="main5_admins_description"><br>il creatore del server InfinityMc</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222272732822114407/download_2.png?ex=66159d30&is=66032830&hm=1a62daaaf601704ad7ba59a17a95847ab8fdae2548ec4021aafdf767fe9f7197&">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">Manager</a>
+              <a class="main5_admins_description_title" href="https://example.com">Francy</a>
+              <a class="main5_admins_description"><br>il manager del server InfinityMc</a>
+            </div>
+          </div>
+        </div>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222273283592818729/download_3.png?ex=66159db3&is=660328b3&hm=b2f21bb1e260599c3b92659e74efaf6c5d1c4b20a21ac060b4458263cd31cb24&">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">Sr.dev</a>
+              <a class="main5_supporters_description_title">Okitask</a>
+              <a class="main5_supporters_description"><br>il sr.dev del nostro server</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222272481445019788/download_1.png?ex=66159cf4&is=660327f4&hm=8a21c0a057cc8f22da47e5a987e960a1b0671653d6bb77d6542a2f3461472d40&">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">plugginer</a>
+              <a class="main5_supporters_description_title">cioc29</a>
+              <a class="main5_supporters_description"><br>il plugginer del nostro server</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222499202194735147/in_arrivo.....png?ex=6616701a&is=6603fb1a&hm=626add80d5653d70cdc6f7a980504dcdc3974bbd42d87430e086c09e154bd489&">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">persone in arrivo</a>
+              <a class="main5_supporters_description_title">staff in arrivo.. 3</a>
+              <a class="main5_supporters_description"><br></a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/attachments/1163459191034363976/1222499202194735147/in_arrivo.....png?ex=6616701a&is=6603fb1a&hm=626add80d5653d70cdc6f7a980504dcdc3974bbd42d87430e086c09e154bd489&">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">persone in arrivo</a>
+              <a class="main5_supporters_description_title">staff in arrivo..</a>
+              <a class="main5_supporters_description"><br></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">ip in arrivo...</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Version:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>ip in arrivo...</a>
+                <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>ip in arrivo...</a>
+                <a></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright_div">
+      <a href="https://github.com/FQQD/MCServer-Web-Template" class="copyright">Made by francy</a>
+    </footer>
+  </body>
+</html>
